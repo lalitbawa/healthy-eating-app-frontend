@@ -162,21 +162,14 @@ export default function Navbar() {
                 href="#"
                 className="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-600 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-800"
               >
-                Team
+                Recepie Generator AI
               </Disclosure.Button>
               <Disclosure.Button
                 as="a"
                 href="#"
                 className="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-600 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-800"
               >
-                Projects
-              </Disclosure.Button>
-              <Disclosure.Button
-                as="a"
-                href="#"
-                className="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-600 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-800"
-              >
-                Calendar
+                Meditate
               </Disclosure.Button>
             </div>
             <div className="border-t border-gray-200 pb-3 pt-4">

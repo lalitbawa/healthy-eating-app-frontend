@@ -1,14 +1,37 @@
 import React from 'react';
+import { createBrowserRouter,RouterProvider } from 'react-router-dom';
 import './App.css';
-import Navbar from './features/navbar/Navbar';
-import CalorieCounter from './features/calorie-counter/CalorieCounter';
+import Dashboard from './pages/Dashboard';
+import Login from './features/auth/components/Login';
+import Signup from './features/auth/components/Signup';
+import Logout from './features/auth/components/Logout';
+import Protected from './features/auth/Protected';
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Protected><Dashboard></Dashboard></Protected>,
+  },
+  {
+    path: "/login",
+    element: <Login></Login>,
+  },
+  {
+    path: "/signup",
+    element: <Signup></Signup>,
+  },
+  {
+    path: "/logout",
+    element: <Logout></Logout>,
+  }
+]);
+
+
 
 function App() {
   return (
     <div className="App">
-      <Navbar></Navbar>
-      <CalorieCounter></CalorieCounter>
-      
+      <RouterProvider router={router}/>
     </div>
   );
 }
