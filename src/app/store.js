@@ -1,10 +1,17 @@
 import { configureStore } from '@reduxjs/toolkit';
-import counterReducer from '../features/counter/counterSlice';
 import authReducer from "../features/auth/authSlice";
+import calorieCounterReducer from '../features/calorie-counter/calorieCounterSlice';
+import calorieProgressReducer from '../features/calorie-progress/calorieProgressSlice';
+import meditationReducer from '../features/meditation/meditationSlice';
+import recepieGeneratorReducer from '../features/recepie-generator/recepieGeneratorSlice';
+
 
 export const store = configureStore({
   reducer: {
-    counter: counterReducer,
     auth: authReducer,
+    calorie: calorieCounterReducer,
+    progress: calorieProgressReducer,
+    meditation: meditationReducer,
+    recepieGenerator: recepieGeneratorReducer,
   },
 });

@@ -1,7 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Fragment } from 'react';
 import { Menu, Transition } from '@headlessui/react';
 import { ChevronDownIcon } from '@heroicons/react/20/solid';
+import { useDispatch, useSelector } from 'react-redux';
+import { selectLoggedInUser } from '../auth/authSlice';
+import { createUserMacrosAsync, selectUserMacros, fetchUserMacrosAsync } from './calorieCounterSlice';
 
 const notificationMethods = [
   { id: 'male', title: 'Male' },
@@ -40,6 +43,15 @@ export default function CalorieCounter() {
   const [activityLevel, setActivityLevel] = useState(activityLevels[0]);
   const [goal, setGoal] = useState(goals[6]);
   const [stats, setStats] = useState(null);
+  const dispatch = useDispatch();
+  const loggedInUser = useSelector(selectLoggedInUser);
+  const userMacros = useSelector(selectUserMacros);
+
+  useEffect(() => {
+    if (loggedInUser) {
+      dispatch(fetchUserMacrosAsync(loggedInUser.id));
+    }
+  }, [dispatch, loggedInUser]);
 
   const calculateCalories = (e) => {
     e.preventDefault();
@@ -58,11 +70,21 @@ export default function CalorieCounter() {
     const fat = (targetCalories * 0.25) / 9;
     const carbs = (targetCalories - protein * 4 - fat * 9) / 4;
 
+    const userMacros = {
+      userId: loggedInUser.id,
+      protein: Math.round(protein),
+      carbs: Math.round(carbs),
+      fat: Math.round(fat),
+      calories: Math.round(targetCalories),
+    };
+
+    dispatch(createUserMacrosAsync(userMacros));
+
     setStats([
-      { name: 'Protein', stat: `${Math.round(protein)}g` },
-      { name: 'Carbs', stat: `${Math.round(carbs)}g` },
-      { name: 'Fat', stat: `${Math.round(fat)}g` },
-      { name: 'Food Energy', stat: `${Math.round(targetCalories)} kcal` },
+      { name: 'Protein', stat: `${userMacros.protein}g` },
+      { name: 'Carbs', stat: `${userMacros.carbs}g` },
+      { name: 'Fat', stat: `${userMacros.fat}g` },
+      { name: 'Food Energy', stat: `${userMacros.calories} kcal` },
     ]);
   };
 
@@ -73,6 +95,30 @@ export default function CalorieCounter() {
           Count Your Macros and Calories
         </h2>
       </div>
+
+      {loggedInUser && userMacros.length > 0 && (
+        <div className="mt-8">
+          <h3 className="text-lg font-medium leading-6 text-gray-900">Your Last Calculated Macros</h3>
+          <div className="mt-4 grid grid-cols-2 gap-4">
+            <div className="bg-gray-100 p-4 rounded-lg">
+              <p className="text-sm font-medium text-gray-500">Protein</p>
+              <p className="mt-1 text-lg font-semibold text-gray-900">{userMacros[0].protein}g</p>
+            </div>
+            <div className="bg-gray-100 p-4 rounded-lg">
+              <p className="text-sm font-medium text-gray-500">Carbs</p>
+              <p className="mt-1 text-lg font-semibold text-gray-900">{userMacros[0].carbs}g</p>
+            </div>
+            <div className="bg-gray-100 p-4 rounded-lg">
+              <p className="text-sm font-medium text-gray-500">Fat</p>
+              <p className="mt-1 text-lg font-semibold text-gray-900">{userMacros[0].fat}g</p>
+            </div>
+            <div className="bg-gray-100 p-4 rounded-lg">
+              <p className="text-sm font-medium text-gray-500">Calories</p>
+              <p className="mt-1 text-lg font-semibold text-gray-900">{userMacros[0].calories} kcal</p>
+            </div>
+          </div>
+        </div>
+      )}
 
       <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
         <form className="space-y-6" onSubmit={calculateCalories}>

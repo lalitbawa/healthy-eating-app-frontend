@@ -1,4 +1,294 @@
 {
+  "meditation": [
+    {
+      "Name": "Mindfulness Meditation",
+      "Description": "Focuses on being present in the moment and non-judgmentally observing your thoughts and surroundings.",
+      "Duration": 30,
+      "Instructions": "Sit in a comfortable position with your eyes closed and focus on your breath. When your mind wanders, gently bring your attention back to your breath."
+    },
+    {
+      "Name": "Transcendental Meditation",
+      "Description": "Uses a mantra to help quiet the mind and achieve a deep state of relaxation.",
+      "Duration": 20,
+      "Instructions": "Sit in a comfortable position with your eyes closed and repeat a mantra silently to yourself. Allow your mind to become absorbed in the mantra."
+    },
+    {
+      "Name": "Loving-Kindness Meditation",
+      "Description": "Involves generating feelings of love and compassion towards oneself and others.",
+      "Duration": 30,
+      "Instructions": "Sit in a comfortable position with your eyes closed and repeat phrases of loving-kindness to yourself and others."
+    },
+    {
+      "Name": "Body Scan Meditation",
+      "Description": "Involves systematically bringing attention to different parts of the body, noticing sensations and relaxing tension.",
+      "Duration": 30,
+      "Instructions": "Lie down or sit in a comfortable position with your eyes closed. Focus on each part of your body starting from your toes and working your way up to the top of your head."
+    },
+    {
+      "Name": "Vipassana Meditation",
+      "Description": "Involves observing the breath and bodily sensations to gain insight into the nature of reality.",
+      "Duration": 60,
+      "Instructions": "Sit in a comfortable position with your eyes closed and observe your breath and bodily sensations without judgement."
+    },
+    {
+      "Name": "Zen Meditation",
+      "Description": "Involves sitting in silence and focusing on the breath, often with the support of a teacher or group.",
+      "Duration": 40,
+      "Instructions": "Sit in a comfortable position with your eyes half-closed and focus on your breath. Follow the instructions of your teacher."
+    },
+    {
+      "Name": "Chakra Meditation",
+      "Description": "Involves focusing on each of the body's energy centers to balance and align them.",
+      "Duration": 30,
+      "Instructions": "Sit in a comfortable position with your eyes closed and focus on each chakra, starting from the base of your spine and working your way up to the crown of your head."
+    },
+    {
+      "Name": "Mantra Meditation",
+      "Description": "Involves repeating a word or phrase to focus the mind and achieve a calm state.",
+      "Duration": 30,
+      "Instructions": "Sit in a comfortable position with your eyes closed and repeat a mantra silently to yourself. Allow your mind to become absorbed in the mantra."
+    },
+    {
+      "Name": "Breath Counting Meditation",
+      "Description": "Involves counting each breath to maintain focus and concentration.",
+      "Duration": 30,
+      "Instructions": "Sit in a comfortable position with your eyes closed and count each inhale and exhale up to 10. Start over at 1 if you get distracted."
+    },
+    {
+      "Name": "Walking Meditation",
+      "Description": "Involves walking slowly and mindfully, focusing on each step and the sensations in the body.",
+      "Duration": 30,
+      "Instructions": "Find a quiet place to walk slowly. Focus on each step, the sensations in your feet and legs, and the environment around you."
+    },
+    {
+      "Name": "Visualization Meditation",
+      "Description": "Involves creating a mental image or scenario to promote relaxation and positive emotions.",
+      "Duration": 30,
+      "Instructions": "Sit in a comfortable position with your eyes closed and visualize a peaceful scene or positive outcome. Engage all your senses in the visualization."
+    },
+    {
+      "Name": "Yoga Nidra Meditation",
+      "Description": "Involves lying down and systematically relaxing different parts of the body to achieve a deep state of relaxation.",
+      "Duration": 40,
+      "Instructions": "Lie down in a comfortable position and follow the instructions of the teacher as they guide you through relaxation of each part of the body."
+    },
+    {
+      "Name": "Sound Meditation",
+      "Description": "Involves focusing on a particular sound or a series of sounds to promote relaxation.",
+      "Duration": 30,
+      "Instructions": "Sit in a comfortable position with your eyes closed and focus on a particular sound, such as chanting, a gong, or a singing bowl."
+    },
+    {
+      "Name": "Qi Gong Meditation",
+      "Description": "Involves combining movement, breath, and visualization to improve physical and mental health.",
+      "Duration": 30,
+      "Instructions": "Follow the movements and breathing exercises of a Qi Gong teacher or video, and visualize the flow of energy in your body."
+    },
+    {
+      "Name": "Kundalini Meditation",
+      "Description": "Involves combining breathwork, movement, and mantra to awaken the energy at the base of the spine and raise it up through the chakras.",
+      "Duration": 30,
+      "Instructions": "Follow the instructions of a Kundalini teacher or video, combining breathwork, movement, and mantra."
+    },
+    {
+      "Name": "Silent Meditation",
+      "Description": "Involves sitting in silence and observing the mind without judgment.",
+      "Duration": 60,
+      "Instructions": "Sit in a comfortable position with your eyes closed and observe your thoughts and sensations without getting caught up in them."
+    },
+    {
+      "Name": "Open Monitoring Meditation",
+      "Description": "Involves observing one's thoughts and feelings without judgment and allowing them to come and go.",
+      "Duration": 30,
+      "Instructions": "Sit in a comfortable position with your eyes closed and observe your thoughts and feelings without trying to change or control them."
+    },
+    {
+      "Name": "Focused Attention Meditation",
+      "Description": "Involves focusing on a specific object or sound to maintain concentration and develop awareness.",
+      "Duration": 30,
+      "Instructions": "Sit in a comfortable position with your eyes closed and focus on a specific object or sound, such as a candle flame or the sound of a bell."
+    },
+    {
+      "Name": "Metta Meditation",
+      "Description": "Involves cultivating feelings of loving-kindness and compassion towards oneself and others.",
+      "Duration": 30,
+      "Instructions": "Sit in a comfortable position with your eyes closed and repeat phrases of loving-kindness to yourself and others."
+    },
+    {
+      "Name": "Body Awareness Meditation",
+      "Description": "Involves focusing on the sensations in the body to develop awareness and relaxation.",
+      "Duration": 30,
+      "Instructions": "Sit in a comfortable position with your eyes closed and focus on the sensations in your body, such as warmth, tingling, or tension."
+    },
+    {
+      "Name": "Compassion Meditation",
+      "Description": "Involves cultivating feelings of empathy and compassion towards oneself and others.",
+      "Duration": 30,
+      "Instructions": "Sit in a comfortable position with your eyes closed and visualize yourself and others experiencing happiness and freedom from suffering."
+    },
+    {
+      "Name": "Breath Awareness and Body Scan Meditation",
+      "Description": "Involves combining breath awareness and body scan techniques to promote relaxation and awareness.",
+      "Duration": 30,
+      "Instructions": "Lie down or sit in a comfortable position with your eyes closed and focus on your breath and the sensations in your body."
+    },
+    {
+      "Name": "Progressive Muscle Relaxation",
+      "Description": "Involves tensing and relaxing different muscle groups to promote relaxation and reduce tension.",
+      "Duration": 30,
+      "Instructions": "Lie down in a comfortable position and systematically tense and then release each muscle group in your body."
+    },
+    {
+      "Name": "Guided Meditation",
+      "Description": "Involves following the instructions of a teacher or audio recording to promote relaxation and awareness.",
+      "Duration": 30,
+      "Instructions": "Sit in a comfortable position with your eyes closed and follow the instructions of the teacher or recording."
+    },
+    {
+      "Name": "Mindful Eating Meditation",
+      "Description": "Involves eating slowly and mindfully, focusing on the taste, texture, and sensations of the food.",
+      "Duration": 30,
+      "Instructions": "Choose a food to eat, sit in a quiet place, and focus on the taste, texture, and sensations of each bite."
+    },
+    {
+      "Name": "Mindful Breathing Meditation",
+      "Description": "Involves focusing on the breath to promote relaxation and develop awareness.",
+      "Duration": 30,
+      "Instructions": "Sit in a comfortable position with your eyes closed and focus on your breath, observing each inhale and exhale."
+    },
+    {
+      "Name": "Compassionate Mind Meditation",
+      "Description": "Involves cultivating feelings of compassion and empathy towards oneself and others.",
+      "Duration": 30,
+      "Instructions": "Sit in a comfortable position with your eyes closed and visualize yourself and others experiencing happiness and freedom from suffering."
+    },
+    {
+      "Name": "Spiritual Meditation",
+      "Description": "Involves connecting with a higher power or spiritual practice to promote relaxation and inner peace.",
+      "Duration": 30,
+      "Instructions": "Sit in a comfortable position with your eyes closed and connect with your higher power or spiritual practice through prayer or visualization."
+    },
+    {
+      "Name": "Chanting Meditation",
+      "Description": "Involves repeating a sound or phrase to promote relaxation and focus.",
+      "Duration": 30,
+      "Instructions": "Sit in a comfortable position with your eyes closed and repeat a sound or phrase, such as 'Om' or 'peace'."
+    },
+    {
+      "Name": "Third Eye Meditation",
+      "Description": "Involves focusing on the area between the eyebrows to promote relaxation and develop intuition.",
+      "Duration": 30,
+      "Instructions": "Sit in a comfortable position with your eyes closed and focus on the area between your eyebrows, imagining a light or energy there."
+    },
+    {
+      "Name": "Mudra Meditation",
+      "Description": "Involves using hand gestures to promote relaxation and focus.",
+      "Duration": 30,
+      "Instructions": "Sit in a comfortable position with your eyes closed and use a specific hand gesture, or mudra, to promote relaxation and focus."
+    },
+    {
+      "Name": "Self-Inquiry Meditation",
+      "Description": "Involves asking oneself open-ended questions to promote self-awareness and understanding.",
+      "Duration": 30,
+      "Instructions": "Sit in a comfortable position with your eyes closed and ask yourself open-ended questions, such as 'Who am I?' or 'What do I really want?'."
+    },
+    {
+      "Name": "Inner Light Meditation",
+      "Description": "Involves focusing on a bright light within oneself to promote relaxation and inner peace.",
+      "Duration": 30,
+      "Instructions": "Sit in a comfortable position with your eyes closed and imagine a bright light within yourself, focusing on its warmth and energy."
+    },
+    {
+      "Name": "Mindful Movement Meditation",
+      "Description": "Involves combining movement and mindfulness to promote relaxation and awareness.",
+      "Duration": 30,
+      "Instructions": "Engage in a gentle movement practice, such as yoga or tai chi, while maintaining awareness of your body and breath."
+    },
+    {
+      "Name": "Gratitude Meditation",
+      "Description": "Involves focusing on feelings of gratitude and appreciation to promote positivity and well-being.",
+      "Duration": 30,
+      "Instructions": "Sit in a comfortable position with your eyes closed and focus on things you are grateful for, allowing yourself to feel the emotions associated with gratitude."
+    },
+    {
+      "Name": "Affirmation Meditation",
+      "Description": "Involves repeating positive affirmations to promote self-confidence and positivity.",
+      "Duration": 30,
+      "Instructions": "Sit in a comfortable position with your eyes closed and repeat positive affirmations to yourself, such as 'I am worthy' or 'I am capable'."
+    },
+    {
+      "Name": "Compassionate Body Scan Meditation",
+      "Description": "Involves combining body scan and compassionate meditation techniques to promote relaxation and self-compassion.",
+      "Duration": 30,
+      "Instructions": "Lie down or sit in a comfortable position with your eyes closed and focus on each part of your body, sending feelings of love and compassion towards yourself."
+    },
+    {
+      "Name": "Breath and Sound Meditation",
+      "Description": "Involves combining breath and sound awareness to promote relaxation and focus.",
+      "Duration": 30,
+      "Instructions": "Sit in a comfortable position with your eyes closed and focus on your breath and a specific sound, such as white noise or a mantra."
+    },
+    {
+      "Name": "Morning Meditation",
+      "Description": "Involves starting the day with a meditation practice to promote focus and positivity.",
+      "Duration": 30,
+      "Instructions": "Sit in a comfortable position with your eyes closed and start the day with a meditation practice of your choice."
+    },
+    {
+      "Name": "Evening Meditation",
+      "Description": "Involves ending the day with a meditation practice to promote relaxation and restful sleep.",
+      "Duration": 30,
+      "Instructions": "Sit in a comfortable position with your eyes closed and end the day with a meditation practice of your choice."
+    },
+    {
+      "Name": "Breath and Body Awareness Meditation",
+      "Description": "Involves focusing on the breath and sensations in the body to promote relaxation and awareness.",
+      "Duration": 30,
+      "Instructions": "Sit in a comfortable position with your eyes closed and focus on your breath and the sensations in your body."
+    },
+    {
+      "Name": "Mindful Communication Meditation",
+      "Description": "Involves practicing mindful communication with oneself and others to promote understanding and connection.",
+      "Duration": 30,
+      "Instructions": "Sit in a comfortable position with your eyes closed and visualize communicating mindfully with yourself and others."
+    },
+    {
+      "Name": "Labyrinth Meditation",
+      "Description": "Involves walking a labyrinth to promote relaxation and focus.",
+      "Duration": 30,
+      "Instructions": "Find a labyrinth and walk it slowly and mindfully, focusing on each step and the path ahead."
+    },
+    {
+      "Name": "Color Visualization Meditation",
+      "Description": "Involves visualizing different colors and their associated emotions to promote relaxation and positivity.",
+      "Duration": 30,
+      "Instructions": "Sit in a comfortable position with your eyes closed and visualize different colors, focusing on the emotions associated with each color."
+    },
+    {
+      "Name": "Breath and Loving-Kindness Meditation",
+      "Description": "Involves combining breath awareness and loving-kindness meditation to promote relaxation and compassion.",
+      "Duration": 30,
+      "Instructions": "Sit in a comfortable position with your eyes closed and focus on your breath, while also sending feelings of love and compassion towards yourself and others."
+    },
+    {
+      "Name": "Gratitude Journaling Meditation",
+      "Description": "Involves journaling about things you are grateful for to promote positivity and well-being.",
+      "Duration": 30,
+      "Instructions": "Write in a journal about things you are grateful for, focusing on the emotions associated with gratitude."
+    },
+    {
+      "Name": "Sitting with Difficult Emotions Meditation",
+      "Description": "Involves sitting with uncomfortable emotions to promote self-awareness and acceptance.",
+      "Duration": 30,
+      "Instructions": "Sit in a comfortable position with your eyes closed and allow yourself to feel difficult emotions without judgement or resistance."
+    },
+    {
+      "Name": "Mindful Walking Meditation",
+      "Description": "Involves walking slowly and mindfully, focusing on each step and the environment around you.",
+      "Duration": 30,
+      "Instructions": "Find a quiet place to walk slowly, focusing on each step and the environment around you."
+    }
+  ],
   "users": [
     {
       "name": "lalit",
@@ -7,10 +297,43 @@
       "id": 1
     },
     {
-      "name": "lalit bawa",
-      "email": "lbawa1111@gmail.com",
+      "name": "lalit",
+      "email": "test@gmail.com",
       "password": "123456",
       "id": 2
+    }
+  ],
+  "usermacros": [
+    {
+      "userId": 1,
+      "protein": 488,
+      "carbs": 262,
+      "fat": 111,
+      "calories": 4003,
+      "id": 1
+    }
+  ],
+  "usertracker": [
+    {
+      "userId": 1,
+      "calories": 200,
+      "food": "lassi",
+      "date": "2024-04-19",
+      "id": 1
+    },
+    {
+      "userId": 1,
+      "calories": 22,
+      "food": "22",
+      "date": "2024-04-25",
+      "id": 2
+    },
+    {
+      "userId": 1,
+      "calories": 220,
+      "food": "banana",
+      "date": "2024-04-25",
+      "id": 3
     }
   ]
 }

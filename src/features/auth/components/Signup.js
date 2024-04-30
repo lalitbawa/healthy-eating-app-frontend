@@ -1,11 +1,10 @@
-
-import React, { useState } from "react";
-import { useSelector, useDispatch } from "react-redux";
-import { Link } from "react-router-dom";
-import logo from "../../../images/logo-white.png";
-import { useForm } from "react-hook-form";
-import { selectLoggedInUser, createUserAsync } from "../authSlice";
-import { Navigate } from "react-router-dom";
+import React, { useState } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { Link } from 'react-router-dom';
+import logo from '../../../images/logo-white.png';
+import { useForm } from 'react-hook-form';
+import { selectLoggedInUser, createUserAsync } from '../authSlice';
+import { Navigate } from 'react-router-dom';
 
 export default function Signup() {
   const dispatch = useDispatch();
@@ -25,15 +24,12 @@ export default function Signup() {
           <div className="mx-auto w-full max-w-sm lg:w-96">
             <div>
               <img className="h-10 w-auto" src={logo} alt="Your Company" />
-              <h2 className="mt-8 text-2xl font-bold leading-9 tracking-tight text-gray-900">
+              <h2 className="mt-8 text-2xl font-bold leading-9 tracking-tight text-indigo-900">
                 Become a member now
               </h2>
-              <p className="mt-2 text-sm leading-6 text-gray-500">
-                Already a member?{" "}
-                <Link
-                  to="/login"
-                  className="font-semibold text-gray-600 hover:text-gray-500"
-                >
+              <p className="mt-2 text-sm leading-6 text-indigo-500">
+                Already a member?{' '}
+                <Link to="/login" className="font-semibold text-indigo-600 hover:text-indigo-500">
                   Login
                 </Link>
               </p>
@@ -45,16 +41,20 @@ export default function Signup() {
                   noValidate
                   onSubmit={handleSubmit(async (data) => {
                     try {
-                      await dispatch(createUserAsync({ name: data.name, email: data.email, password: data.password })).unwrap();
+                      await dispatch(createUserAsync({ name: data.name, email: data.email, password: data.password})).unwrap();
                     } catch (error) {
                       console.log(error);
-                      setError(error.toString());
+                      if (error.message === 'User with the same email already exists') {
+                        setError('User with the same email already exists');
+                      } else {
+                        setError('An error occurred. Please try again.');
+                      }
                     }
                   })}
                   className="space-y-6"
                 >
                   <div>
-                    <label htmlFor="name" className="block text-sm font-medium leading-6 text-gray-900">
+                    <label htmlFor="name" className="block text-sm font-medium leading-6 text-indigo-900">
                       Name
                     </label>
                     <div className="mt-2">
@@ -64,104 +64,86 @@ export default function Signup() {
                           required: 'Name is required',
                         })}
                         type="text"
-                        className={`block w-full rounded-md border-0 py-1.5 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-gray-600 sm:text-sm sm:leading-6 ${errors.name ? 'ring-red-500' : ''}`}
+                        className={`block w-full rounded-md border-0 py-1.5 shadow-sm ring-1 ring-inset ring-indigo-300 placeholder:text-indigo-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 ${
+                          errors.name ? 'ring-red-500' : ''
+                        }`}
                       />
-                      {errors.name && (
-                        <p className="mt-1 text-sm text-red-600">{errors.name.message}</p>
-                      )}
+                      {errors.name && <p className="mt-1 text-sm text-red-600">{errors.name.message}</p>}
                     </div>
                   </div>
                   <div>
-                    <label
-                      htmlFor="email"
-                      className="block text-sm font-medium leading-6 text-gray-900"
-                    >
+                    <label htmlFor="email" className="block text-sm font-medium leading-6 text-indigo-900">
                       Email address
                     </label>
                     <div className="mt-2">
                       <input
                         id="email"
-                        {...register("email", {
-                          required: "Email is required",
+                        {...register('email', {
+                          required: 'Email is required',
                           pattern: {
                             value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                            message: "Invalid email address",
+                            message: 'Invalid email address',
                           },
                         })}
                         type="email"
-                        className={`block w-full rounded-md border-0 py-1.5 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-gray-600 sm:text-sm sm:leading-6 ${errors.email ? "ring-red-500" : ""}`}
+                        className={`block w-full rounded-md border-0 py-1.5 shadow-sm ring-1 ring-inset ring-indigo-300 placeholder:text-indigo-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 ${
+                          errors.email ? 'ring-red-500' : ''
+                        }`}
                       />
-                      {errors.email && (
-                        <p className="mt-1 text-sm text-red-600">
-                          {errors.email.message}
-                        </p>
-                      )}
+                      {errors.email && <p className="mt-1 text-sm text-red-600">{errors.email.message}</p>}
                     </div>
                   </div>
 
                   <div>
-                    <label
-                      htmlFor="password"
-                      className="block text-sm font-medium leading-6 text-gray-900"
-                    >
+                    <label htmlFor="password" className="block text-sm font-medium leading-6 text-indigo-900">
                       Password
                     </label>
                     <div className="mt-2">
                       <input
                         id="password"
-                        {...register("password", {
-                          required: "Password is required",
+                        {...register('password', {
+                          required: 'Password is required',
                           minLength: {
                             value: 6,
-                            message:
-                              "Password must be at least 6 characters long",
+                            message: 'Password must be at least 6 characters long',
                           },
                         })}
                         type="password"
-                        className={`block w-full rounded-md border-0 py-1.5 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-gray-600 sm:text-sm sm:leading-6 ${errors.password ? "ring-red-500" : ""}`}
+                        className={`block w-full rounded-md border-0 py-1.5 shadow-sm ring-1 ring-inset ring-indigo-300 placeholder:text-indigo-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 ${
+                          errors.password ? 'ring-red-500' : ''
+                        }`}
                       />
-                      {errors.password && (
-                        <p className="mt-1 text-sm text-red-600">
-                          {errors.password.message}
-                        </p>
-                      )}
+                      {errors.password && <p className="mt-1 text-sm text-red-600">{errors.password.message}</p>}
                     </div>
                   </div>
 
                   <div>
-                    <label
-                      htmlFor="confirmPassword"
-                      className="block text-sm font-medium leading-6 text-gray-900"
-                    >
+                    <label htmlFor="confirmPassword" className="block text-sm font-medium leading-6 text-indigo-900">
                       Confirm Password
                     </label>
                     <div className="mt-2">
                       <input
                         id="confirmPassword"
-                        {...register("confirmPassword", {
-                          required: "Confirm Password is required",
-                          validate: (value) =>
-                            value === watch("password") ||
-                            "Passwords do not match",
+                        {...register('confirmPassword', {
+                          required: 'Confirm Password is required',
+                          validate: (value) => value === watch('password') || 'Passwords do not match',
                         })}
                         type="password"
-                        className={`block w-full rounded-md border-0 py-1.5 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-gray-600 sm:text-sm sm:leading-6 ${errors.confirmPassword ? "ring-red-500" : ""}`}
+                        className={`block w-full rounded-md border-0 py-1.5 shadow-sm ring-1 ring-inset ring-indigo-300 placeholder:text-indigo-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 ${
+                          errors.confirmPassword ? 'ring-red-500' : ''
+                        }`}
                       />
                       {errors.confirmPassword && (
-                        <p className="mt-1 text-sm text-red-600">
-                          {errors.confirmPassword.message}
-                        </p>
+                        <p className="mt-1 text-sm text-red-600">{errors.confirmPassword.message}</p>
                       )}
                     </div>
-                    {error && (
-                      <p className="mt-1 text-sm text-red-600">User already exists</p>
-                    )}
+                    {error && <p className="mt-1 text-sm text-red-600">User already exists</p>}
                   </div>
 
                   <div>
                     <button
                       type="submit"
-                      className="flex w-full justify-center rounded-md bg-gray-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-gray-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-600"
+                      className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                     >
                       Sign up
                     </button>
@@ -171,11 +153,8 @@ export default function Signup() {
 
               <div className="mt-10">
                 <div className="relative">
-                  <div
-                    className="absolute inset-0 flex items-center"
-                    aria-hidden="true"
-                  >
-                    <div className="w-full border-t border-gray-200" />
+                  <div className="absolute inset-0 flex items-center" aria-hidden="true">
+                    <div className="w-full border-t border-indigo-200" />
                   </div>
                 </div>
               </div>
@@ -183,11 +162,7 @@ export default function Signup() {
           </div>
         </div>
         <div className="relative hidden w-0 flex-1 lg:block">
-          <img
-            className="absolute inset-0 h-full w-full object-cover"
-            src={logo}
-            alt=""
-          />
+          <img className="absolute inset-0 h-full w-full object-cover" src={logo} alt="" />
         </div>
       </div>
     </>

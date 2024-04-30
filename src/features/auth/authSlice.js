@@ -23,9 +23,9 @@ export const checkUserAsync = createAsyncThunk(
   async (loginInfo, { rejectWithValue }) => {
     try {
       const response = await checkUser(loginInfo);
-      return response.data.user;
+      return response.user;
     } catch (error) {
-      return rejectWithValue("User not found");
+      return rejectWithValue(error.message);
     }
   }
 );
