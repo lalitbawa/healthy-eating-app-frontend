@@ -18,9 +18,8 @@ export default function Meditation() {
   const handleStartClick = (exercise) => {
     setSelectedMeditation(exercise);
     setShowPopup(true);
-    setTimer(exercise.duration * 60); // Convert minutes to seconds
+    setTimer(exercise.duration * 60);
   };
-
   const handlePopupClose = () => {
     setShowPopup(false);
     setSelectedMeditation(null);
@@ -51,7 +50,7 @@ export default function Meditation() {
   };
 
   const handleTimerStop = () => {
-    setTimer(selectedMeditation.duration * 60); // Convert minutes to seconds
+    setTimer(selectedMeditation.duration * 60);
     setIsRunning(false);
     clearInterval(intervalRef.current);
   };
@@ -61,12 +60,10 @@ export default function Meditation() {
     const seconds = time % 60;
     return `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
   };
-  
+
   return (
     <div className="px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-      {/* ... */}
       <div className="mt-8 flow-root">
-        {/* ... */}
         <div className="overflow-x-auto">
           <table className="min-w-full divide-y divide-gray-300">
             <thead className="bg-gray-50">
