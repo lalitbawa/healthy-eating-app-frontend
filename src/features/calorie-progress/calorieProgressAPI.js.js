@@ -1,7 +1,7 @@
 export function addCalories(calories) {
   return new Promise(async (resolve, reject) => {
     try {
-      const response = await fetch("http://localhost:3000/api/usertracker", {
+      const response = await fetch("https://healthy-eating-app-backend.onrender.com/api/usertracker", {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -25,7 +25,7 @@ export function addCalories(calories) {
 export function fetchUserTracker(userId) {
   return new Promise(async (resolve, reject) => {
     try {
-      const response = await fetch(`http://localhost:3000/api/usertracker?userId=${userId}`);
+      const response = await fetch(`https://healthy-eating-app-backend.onrender.com/api/usertracker?userId=${userId}`);
 
       if (response.ok) {
         const data = await response.json();

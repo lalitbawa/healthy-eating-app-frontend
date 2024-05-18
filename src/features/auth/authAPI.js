@@ -1,7 +1,7 @@
 export function createUser(userData) {
   return new Promise(async (resolve, reject) => {
     try {
-      const response = await fetch("http://localhost:3000/api/register", {
+      const response = await fetch("https://healthy-eating-app-backend.onrender.com/api/register", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -25,7 +25,7 @@ export function createUser(userData) {
 export function checkUser(loginData) {
   return new Promise(async (resolve, reject) => {
     try {
-      const response = await fetch("http://localhost:3000/api/login", {
+      const response = await fetch("https://healthy-eating-app-backend.onrender.com/api/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

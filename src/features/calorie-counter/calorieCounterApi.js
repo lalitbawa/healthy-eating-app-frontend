@@ -1,7 +1,7 @@
 export function createUserMacros(userMacros) {
   return new Promise(async (resolve, reject) => {
     try {
-      const response = await fetch("http://localhost:3000/api/usermacros", {
+      const response = await fetch("https://healthy-eating-app-backend.onrender.com/api/usermacros", {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

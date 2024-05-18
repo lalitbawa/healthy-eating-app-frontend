@@ -1,7 +1,7 @@
 export function fetchUserMacros(userId) {
   return new Promise(async (resolve, reject) => {
     try {
-      const response = await fetch(`http://localhost:3000/api/usermacros?userId=${userId}`);
+      const response = await fetch(`https://healthy-eating-app-backend.onrender.com/api/usermacros?userId=${userId}`);
       if (response.ok) {
         const data = await response.json();
         resolve(data);
@@ -17,7 +17,7 @@ export function fetchUserMacros(userId) {
 
 export async function generateMealPlans(prompt) {
   try {
-    const response = await fetch('http://localhost:3000/api/generate-meal-plans', {
+    const response = await fetch('https://healthy-eating-app-backend.onrender.com/api/generate-meal-plans', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
