@@ -18,7 +18,7 @@ export const createUserMacrosAsync = createAsyncThunk(
 export const fetchUserMacrosAsync = createAsyncThunk(
   'calorie/fetchUserMacros',
   async (userId) => {
-    const response = await fetch(`http://localhost:3000/api/usermacros?userId=${userId}`);
+    const response = await fetch(`https://healthy-eating-app-backend.onrender.com/api/usermacros?userId=${userId}`);
     const data = await response.json();
     return data;
   }
